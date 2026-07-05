@@ -43,7 +43,7 @@
     }
 #endif
 
-#define COPYRIGHT   "Copyright (C) 2025 - 2026 omerdev All Rights Reserved. "
+#define COPYRIGHT   "Copyright (C) 2025 - 2026 omerdev "
 #define VERSION     "26.1"
 #define RED     "\x1b[1;31m"
 #define GREEN   "\x1b[1;32m"
