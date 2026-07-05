@@ -44,7 +44,7 @@
 #endif
 
 #define COPYRIGHT   "Copyright (C) 2025 - 2026 omerdev "
-#define VERSION     "26.1"
+#define VERSION     "26.2"
 #define RED     "\x1b[1;31m"
 #define GREEN   "\x1b[1;32m"
 #define YELLOW  "\x1b[1;33m"
@@ -12053,7 +12053,7 @@ int main(int argc, char *argv[]) {
         if (p->tags[0]) {
             const char *existing = getenv("OMAKE_EXTRA_TAGS");
             char merged[1024]; merged[0]='\0';
-            if (existing) { strncpy(merged, existing, 1023); strncat(merged," ",1); }
+            if (existing) { strncpy(merged, existing, 1023); merged[1023]='\0'; strncat(merged, " ", 1023 - strlen(merged)); }
             strncat(merged, p->tags, 1023-strlen(merged));
             setenv("OMAKE_EXTRA_TAGS", merged, 1);
         }
